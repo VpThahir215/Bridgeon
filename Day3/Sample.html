@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Sample.css">
+</head>
+
+<body>
+    <div id="row0">
+        <table border="1">
+
+            <tr>
+                <th colspan="6" style="background-color: rgb(137, 169, 169);">Time Table</th>
+            </tr>
+
+            <tr style="background-color:gray">
+                <th rowspan="6">hour</th>
+
+
+
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+            </tr>
+
+
+
+
+
+            <tr>
+                <td>Sceience</td>
+                <td>Maths</td>
+                <td>Science</td>
+                <td>Maths</td>
+                <td>Arts</td>
+            </tr>
+            <tr>
+                <td>Social</td>
+                <td>Maths</td>
+                <td>Science</td>
+                <td>Maths</td>
+                <td>Arts</td>
+            </tr>
+            <tr>
+
+                <td colspan="5" style="text-align: center; background-color: rgb(214, 140, 4);">lunch</td>
+            </tr>
+            <tr>
+                <td>Sceience</td>
+                <td>Maths</td>
+                <td>Science</td>
+                <td>Maths</td>
+                <td rowspan="2" style="text-align: center; ">Arts</td>
+            </tr>
+            <tr>
+                <td>Social</td>
+                <td>Maths</td>
+                <td>Science</td>
+                <td>Maths</td>
+            </tr>
+
+
+
+
+
+
+
+        </table>
+    </div>
+    <div class="form">
+        <form action="">
+            <div class="row1">
+                <h3>Personal Details</h3>
+                <label for="name">Name</label>
+                <input type="text" name="name"><br><br>
+                <label for="pasword">Pasword</label>
+                <input type="password" name="pasword"><br><br>
+                <label for="email">Email</label>
+                <input type="email" name="email"><br><br>
+                <label for="gender">Gender</label>
+                <input type="radio" name="male">
+                <label for="gender">Male</label>
+                <input type="radio" name="male">
+                <label for="gender">Female</label><br><br>
+                <label for="contact">Contact</label>
+                <input type="tel" name="contact">
+            </div>
+            <div class="education">
+            <h3>Educational Qualification</h3>
+            <label for="degree">Degree</label>
+
+            <select name="degree" id="degree">
+                <option>Select your degree </option>
+                <option value="bcom">BCOM</option>
+
+                <option value="ba">BA</option>
+
+            </select><br><br>
+            <label for="engineering">Engineering</label>
+
+            <select name="engineering" id="engineering">
+                <option>Select your engineering</option>
+                <option value="computer">Computering Engineering</option>
+
+                <option value="robotic">Robotic Engineering </option>
+
+            </select><br><br>
+            <label for="hobbies">Hobbies</label>
+            <input type="checkbox" name="chess">
+            <label for="chess">Playing chess</label>
+            <input type="checkbox" name="reading">
+            <label for="reading">Reading Books</label>
+
+</div>
+<div class="adress">
+            <h3>Adress</h3>
+            <textarea name="adress" id="adress"></textarea>
+            <label for="resume">Attch Resume</label>
+            <input type="file" No file choosen><br><br>
+            <div class="suRE">
+            <input type="submit" value="Submit" >
+            <input type="reset" value="Reset">
+</div>
+
+</div>
+        </form>
+    </div>
+</body>
+
+</html>

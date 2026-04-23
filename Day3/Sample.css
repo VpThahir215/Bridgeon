@@ -1,0 +1,59 @@
+table{
+width: 50% ;
+ border: 1px solid black;
+  border-collapse: collapse;
+
+}
+#adress{
+  width: 380px;
+  height: 130px;
+  
+}form{
+background-color: rgb(196, 189, 189);
+width: 40%;
+
+  margin-top: 80px;
+  margin-left: 300px;
+ 
+
+}
+h3{
+  text-align: center;
+}
+.row1{
+text-align: center;
+;
+}
+#row0{
+ 
+
+  margin-top: 80px;
+  margin-left: 300px;
+}
+.education{
+  background-color: rgb(196, 189, 189);
+  
+width: 48%;
+
+  margin-top: 61px;
+  margin-left: 236px;
+ 
+
+}
+.adress{
+  background-color: rgb(196, 189, 189);
+width: 47%;
+
+  margin-top: 54px;
+  margin-left: 220px;
+}
+.suRE{
+  background-color: rgb(196, 189, 189);
+width: 41;;
+
+  margin-top: 17px;
+  margin-left: 110px;
+  margin-bottom: 90 px;
+  
+}
+
