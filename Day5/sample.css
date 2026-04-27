@@ -1,0 +1,29 @@
+.main{
+    display: grid;
+justify-content: center;
+gap:5px 5px;
+}.header{
+    background-color: rgb(106, 106, 8);
+    width: 10in;
+  height: 62px;
+}
+.sidebar{
+    background-color: rgba(55, 175, 131, 0.515);
+    width: 3in;
+  
+}
+.main-content{
+    background-color: blueviolet;
+    width: 664px;
+}
+.footer{
+    background-color: gray;
+    height: 55px;
+}
+.content{
+    display: grid;
+    grid-template-columns: auto auto;
+     width: 10in;
+  height: 120px;
+column-gap: 5px;
+}
