@@ -105,3 +105,13 @@ console.log(k2.sort((a,b)=> a-b));
 let l=[10,20,30,40,50];
 console.log(l.sort(()=> Math.random() -0.4));
 
+
+
+// Math.min()    Math.max()
+
+
+
+let m=[123,432,365,353,6,464,2,435,23,];
+console.log(Math.min(...m));
+console.log(...m);
+
