@@ -39,3 +39,13 @@ for(const ind of te){
 console.log(freq);
 
 
+let ks=[
+   {name:"Messi",age:39,} ,
+   {name:"Neymer",age:35} 
+
+]
+let ss=ks.sort((a,b)=> a.age - b.age);
+console.log(ss);
+
+
+console.log(this)

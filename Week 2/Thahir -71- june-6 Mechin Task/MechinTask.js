@@ -45,10 +45,4 @@ moveCapital("PyTHon")
 
 
 //Question 
-
-// function multiplicationTable(a){
-// let b=a.map(num=> num *2);
-// console.log(b);
-
-// }
-// multiplicationTable(3)
+    
