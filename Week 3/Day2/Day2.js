@@ -34,3 +34,74 @@ mult(sum,sum,(mul)=>{
 
 
 })
+
+
+const Promise=require('promise');
+
+function addtition(num1,num2){
+return new Promise((resolve,reject)=>{
+    if(num1===0){
+        reject("The first number is zeero")
+    }
+    resolve(num1+num2)
+})
+}
+function multiplication(num1,num2){
+return new Promise((resolve,reject)=>{
+    if(num1===0){
+        reject("The first number is zeero")
+    }
+    resolve(num1*num2)
+})
+}
+function div(num1,num2){
+return new Promise((resolve,reject)=>{
+    if(num1===0){
+        reject("The first number is zeero")
+    }
+    resolve(num1/num2)
+})
+}
+addtition(10,20).then((ad)=>{
+    console.log(ad);
+    return multiplication(ad,ad);
+    
+}).then((mult)=>{
+    console.log(mult);
+    return div(mult,2);
+}).then((div)=>{
+    console.log(div);
+    
+}).catch((reject)=>{
+    console.log(reject);
+    
+})
+
+
+function getName(){
+    return new Promise((resolve,reject)=>{
+      setTimeout(()=>{
+        resolve("Thahir")
+      },3000)
+    })
+}
+
+function getNumber(){
+    return new Promise((resolve,reject)=>{
+      setTimeout(()=>{
+        resolve("9946659082")
+      },2000)
+    })
+}
+
+// Promise.all([getName(),getNumber()]).then((result)=>{
+//     console.log(result);
+    
+// })
+
+async function user(){
+    let name=await getName();
+    console.log(name);
+    
+}
+user()
