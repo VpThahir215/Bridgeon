@@ -1,0 +1,21 @@
+<input type="text" id="search" placeholder="Search">
+
+<script>
+
+// store timer id
+let timer;
+
+// listen for typing
+document.getElementById("search").addEventListener("input", () => {
+
+  // cancel previous timer
+  clearTimeout(timer);
+
+  // create new timer
+  timer = setTimeout(() => {
+
+    console.log("Searching...");
+
+  }, 1000);
+
+});
