@@ -2,6 +2,7 @@
 
 
 
+
 let user={
     name:"Ronaldo",
     Personel:{
@@ -83,4 +84,82 @@ console.log(f1);
 
 
 
+let z=[1,2,2,3,3,4,4,5,5,6,6,7,3];
+let y=new Set(z);
+console.log(y);
+let x=[...y];
+console.log(x);
 
+
+// const input = document.getElementById("search");
+
+// let timer;
+
+// input.addEventListener("input", () => {
+
+//     console.log("You pressed a key");
+
+//     // Cancel the previous timer
+//     clearTimeout(timer);
+
+//     // Start a new timer
+//     timer = setTimeout(() => {
+//         console.log("Searching...");
+//     }, 1000);
+
+// });
+
+// let input=document.querySelector("#search");
+// let timerr;
+// input.addEventListener("input",()=>{
+//     console.log("Starting");
+//     clearTimeout(timerr);
+//     setTimeout(()=>{
+//     console.log("compleated");
+
+//     },1000)
+    
+// })
+
+
+
+
+// async function l(){
+// let url=("https://jsonplaceholder.typicode.com/users");
+// try{
+//     let arr=[];
+//     let response=await fetch(url);
+//     let data=await response.json();
+
+//     arr.push(data[0].name.toUpperCase());
+//     arr.push(data[0].company.name);
+//     console.log(data[0].id);
+//   console.log(arr);
+  
+    
+    
+// }catch(error){
+//     console.log("wrong");
+    
+
+// }
+// }
+// l()
+
+
+let url=("https://jsonplaceholder.typicode.com/users");
+let arr=[]
+fetch(url)
+.then((response)=>{
+    return response.json();
+})
+.then((data)=>{
+    arr.push(data[0].name.toUpperCase());
+    arr.push(data[0].company.name);
+    console.log(arr);
+    
+})
+.catch ((error)=>{
+    console.log("wrong");
+    
+})
