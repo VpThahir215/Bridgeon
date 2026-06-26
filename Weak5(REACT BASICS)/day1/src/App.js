@@ -6,6 +6,11 @@ import Counter from './components/Counter';
 import Employ from './components/Employ';
 import Disply from './components/Disply';
 import Count2 from './components/Count2';
+import Count3 from './components/Count3';
+import Input from './components/Input';
+import List from './components/List';
+import Conditional from './components/Conditional';
+import Form from './components/Form';
 
 
 function App() {
@@ -46,16 +51,22 @@ function App() {
    <Counter {...obj}/>
       <Counter title='2nd' count={count}/>
      {
-      dt.map((dt,index)=>{
+      dt.map((vl,index)=>{
         return (
           // <Employ key={index} name={obj.name} club={obj.club}/>
-           <Employ  {...dt} key={index} />
+           <Employ  {...vl} key={index} />
         )
       })
      }
      <h1 onClick={()=>setState(!state)}>Show/Hide</h1>
 {state? <Disply /> :null}
 <Count2/>
+<Count3/>
+<Input />
+<List/>
+<Conditional/>
+<Form />
+
    </>
   );
 }

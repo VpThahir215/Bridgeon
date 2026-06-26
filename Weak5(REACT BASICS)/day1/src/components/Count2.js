@@ -7,7 +7,10 @@ function Count2(props) {
     useEffect(()=>{
         console.log("Mounting.....");
         console.log("Updating....."+count);
-        
+        return ()=>{
+          console.log("Clean Up"+count);
+          
+        }
         
         
     },[count])
