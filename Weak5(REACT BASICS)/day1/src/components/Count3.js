@@ -4,6 +4,7 @@ import { useState } from 'react'
 function Count3() {
 
 const [count,setCount]=useState(0);
+const [dark,setDark]= useState(false);
 
 const [count2,setCount2]=useState(0);
 
@@ -25,6 +26,11 @@ useEffect(()=>{
       <h1>Count : {count}</h1>
        <button onClick={()=>setCount2(count2+1)}>One more</button>
       <h1>Count : {count2}</h1>
+      <button onClick={()=>setDark(!dark)}>Change Theame</button>
+      <h1 style={{
+       color: dark? "yellow":"blue"
+      }}
+      >Hellow React</h1>
     </div>
   )
 }

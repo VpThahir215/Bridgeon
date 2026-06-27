@@ -1,7 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
 
+
+
 function Form() {
+  
     const [name,setName]=useState("")
         function handleSubmit(event){
             event.preventDefault()
@@ -16,7 +19,7 @@ function Form() {
 
   return (
     <div>
-    <form action={handleSubmit}>
+    <form onSubmit={handleSubmit}>
     <input type="text" onChange={(e)=>setName(e.target.value)}/>
     
     <button type='submit'>Submit</button>

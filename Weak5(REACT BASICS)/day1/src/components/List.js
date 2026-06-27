@@ -16,7 +16,7 @@ let object=[
         })}
         {object.map((val,index)=>{
           return(
-            <h1>Bike:{val.Bike} , Color:{val.Color}</h1>
+            <h1  style={{color:"red"}}>Bike:{val.Bike} , Color:{val.Color}</h1>
           )
         })}
       

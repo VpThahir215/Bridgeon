@@ -11,11 +11,18 @@ import Input from './components/Input';
 import List from './components/List';
 import Conditional from './components/Conditional';
 import Form from './components/Form';
+import Hoc from './components/Hoc';
+  
+
 
 
 function App() {
+    const FormWelcome=Hoc(Form);
+    const CountWelcome=Hoc(Count3)
+    const HeadeWelcome=Hoc(Header)
   const [count,setCount]=useState(0);
   const [state,setState]=useState(false)
+
 
   let name="Thahir"
   let str="GOAT"
@@ -44,6 +51,8 @@ function App() {
 
 
     <>
+    <HeadeWelcome/>
+    <FormWelcome/>
    <h1 style={{color:"red"}}>HELLO WORLD</h1>
    <p className='how'>How are you {name}</p>
    <Header name={str} />
@@ -66,6 +75,10 @@ function App() {
 <List/>
 <Conditional/>
 <Form />
+<CountWelcome/>
+
+
+
 
    </>
   );
