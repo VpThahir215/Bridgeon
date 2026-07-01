@@ -8,7 +8,7 @@ function Conditional() {
   
     <div>
        <button onClick={()=>useShow(!show)}>Click</button>
-       {show? <h1>Hello </h1>:<h1>Hide</h1>}
+       {show ? <h1>Hello </h1>:<h1>Hide</h1>}
     </div>
   )
 }

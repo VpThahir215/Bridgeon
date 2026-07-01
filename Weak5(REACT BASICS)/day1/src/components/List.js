@@ -7,6 +7,9 @@ let object=[
    {Bike:"YEZDI" , Color:"White"},
     {Bike:"KTM " , Color:"Orange"},
 ]
+const lastObject=object.filter((val)=>{
+  return(val.Bike!=="YEZDI")
+})
 
 
   return (
@@ -14,7 +17,10 @@ let object=[
         {arr.map((val,index)=>{
           return(  <h1>{val}</h1>)
         })}
-        {object.map((val,index)=>{
+        {
+         
+        }
+        {lastObject.map((val,index)=>{
           return(
             <h1  style={{color:"red"}}>Bike:{val.Bike} , Color:{val.Color}</h1>
           )
