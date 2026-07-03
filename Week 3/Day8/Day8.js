@@ -49,3 +49,9 @@ console.log(ss);
 
 
 console.log(this)
+
+
+
+console.log("hyyy");
+console.log("khkjh");
+
