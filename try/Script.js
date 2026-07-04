@@ -76,3 +76,14 @@ console.log(aaa);
 }
 
 evenKeys({j:12,k:13,z:100})
+
+
+var merge = function(nums1, m, nums2, n) {
+   let one=nums1.filter((val)=>{
+    return val !==0
+   })
+  nums1= one.concat(nums2).sort((a,b)=> a-b);
+return nums1
+};
+
+merge([1,2,3,0,0,0])
