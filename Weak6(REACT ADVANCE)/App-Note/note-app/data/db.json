@@ -1,0 +1,25 @@
+{
+  "notes": [
+    {
+      "text": "Messi",
+      "id": "pHkdLtv1m0c"
+    },
+    {
+      "text": "ROONY",
+      "id": "ITC9KvvmkI4"
+    },
+    {
+      "text": "KAKKA",
+      "id": "OM5ulzp51NE"
+    },
+    {
+      "text": "CR7",
+      "id": "frD6kvoHo2E"
+    },
+    {
+      "text": "kkkk",
+      "id": "eIz_CfvA0Ec"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
