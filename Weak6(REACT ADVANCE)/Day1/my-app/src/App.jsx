@@ -7,15 +7,29 @@ import ProfileUseContext from './component/ProfileUseContext'
 import UseReducer from './component/UseReducer'
 import CustomHook from './component/CustomHook'
 import CustomHook2 from './component/CustomHook2'
-import Home from './component/pages/Home'
-import About from './component/pages/About'
-import Contact from './component/pages/Contact'
 import Product from './component/pages/Product'
 import Layout from './component/nestedRout/Layout'
 import About2 from './component/nestedRout/About2'
 import Contact2 from './component/nestedRout/Contact2'
 import Home2 from './component/nestedRout/Home2'
+import Memo from './component/pages/Memo'
+import UseMemo from './component/pages/UseMemo'
 
+
+
+// *******LAZY LOADING********
+
+
+
+import { lazy, Suspense } from 'react'
+
+const Home = lazy(() => import('./component/pages/Home'));
+const About = lazy(() => import('./component/pages/About'));
+const Contact = lazy(() => import('./component/pages/Contact'));
+
+
+
+// *******LAZY LOADING   IVIDE VARE AAAN BAAKI ENDAANO VENDATH ATH WRAP CHEYYUKA INSIDE SUSPENSE  ATH ADEEEL EYUDIKKN********
 
 function App() {
   const [count, setCount] = useState(0)
@@ -73,27 +87,35 @@ function App() {
       <button onClick={() => navigate('/product/3')}>Himalayan 450</button>
       <button onClick={() => navigate('/product/4')}>Himalayan 411</button>
 
-      <Routes>
 
-        <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contact/>}/>
-        <Route path='/home' element={<Home/>}/>
-        <Route path='/product/:id' element={<Product/>}/>
-    
-        {/* <Route path="/" element={<Layout/>}/>
+
+
+
+      // *******LAZY LOADING********
+
+
+      <Suspense fallback={<h1>Loading.......</h1>}>
+        <Routes>
+
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/product/:id' element={<Product />} />
+
+          {/* <Route path="/" element={<Layout/>}/>
         <Route index element={<Home2/>}/>
         <Route path='about2' element={<About2/>}/>
         <Route path='contact2' element={<Contact2/>}/> */}
 
-      </Routes>
-
-      <Routes>
-
-  
-  
-</Routes>
+        </Routes>
+      </Suspense>
 
 
+      // *******LAZY LOADING  END********
+    
+
+      <Memo />
+      <UseMemo />
 
     </>
   )
