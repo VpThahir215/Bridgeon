@@ -10,6 +10,8 @@ import Three from './Routing/Three.jsx'
 import Tow from './Routing/Tow.jsx'
 import {Routes,Route,useNavigate,Link} from 'react-router-dom'
 import Note from './Note-App/Note.jsx'
+import Memo from './Memo & useMemo/Memo.jsx'
+import SearchBar from './Search -bar/SearchBar.jsx'
 
 
 function App() {
@@ -33,7 +35,8 @@ function App() {
    </Routes>
    <Note/>
 
-
+   <Memo/>
+   <SearchBar/>
     </>
   )
 }

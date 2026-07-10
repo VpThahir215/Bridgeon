@@ -7,10 +7,6 @@
     {
       "text": "messi",
       "id": "Wz9nstGt12k"
-    },
-    {
-      "text": "neymar",
-      "id": "tjgqoFZLWBw"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

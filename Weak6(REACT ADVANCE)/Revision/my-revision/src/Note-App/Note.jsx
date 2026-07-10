@@ -69,6 +69,7 @@ setEditId(val.id)
                )
             })
         }
+        
 
     </div>
   )

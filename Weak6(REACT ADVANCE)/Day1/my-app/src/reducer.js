@@ -6,7 +6,6 @@ function reducer(state,action){
       if(action.type==="Decrement"){
         return state-1
     }
-
 return state;
 }
 
