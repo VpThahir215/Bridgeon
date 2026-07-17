@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+
+
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto","Heveltica Neue",sans-serif;
+  background-color: #1e1e2f;
+  color: azure;
+}

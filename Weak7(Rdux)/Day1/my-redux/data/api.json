@@ -1,0 +1,17 @@
+[
+    {
+        "id":0,
+        "image": "/Handle-Black.jpeg",
+        "title": "HIMALAYAN 450 BLACK"
+    },
+     {
+        "id":1,
+        "image": "/Slate-Poppy-Blue.jpeg",
+        "title": "HIMALAYAN 450 BLUE"
+    },
+     {
+        "id":2,
+        "image": "/White.jpeg",
+        "title": "HIMALAYAN 450 WHITE"
+    }
+]

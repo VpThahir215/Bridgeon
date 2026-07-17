@@ -9,11 +9,24 @@ function appReducer(prevState=initialState,action){
     // if(prevState===undefined){
     //     return initialState
     // }
+
+    switch (action.type ){
+        case 'increment':
+            return{
+                ...prevState,
+                value:prevState.value+1
+            }
+              case 'decrement':
+            return{
+                ...prevState,
+                value:prevState.value-1
+            }
+            default:
+                return prevState;
+    }
     return prevState;
 
 }
 const store=createStore(appReducer)
-const state=store.getState()
-console.log(state);
-document.getElementById('label').innerHTML=state.value
+export default store
 
