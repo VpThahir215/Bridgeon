@@ -1,0 +1,115 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "HIMALAYAN 450 BLACK",
+      "price": 285000,
+      "brand": "Royal Enfield",
+      "category": "Adventure",
+      "stock": 12,
+      "rating": 4.8,
+      "image": "/Handle-Black.jpeg"
+    },
+    {
+      "id": "2",
+      "title": "HIMALAYAN 450 BLUE",
+      "price": 287000,
+      "brand": "Royal Enfield",
+      "category": "Adventure",
+      "stock": 8,
+      "rating": 4.7,
+      "image": "/Slate-Poppy-Blue.jpeg"
+    },
+    {
+      "id": "3",
+      "title": "HIMALAYAN 450 WHITE",
+      "price": 289000,
+      "brand": "Royal Enfield",
+      "category": "Adventure",
+      "stock": 5,
+      "rating": 4.9,
+      "image": "/White.jpeg"
+    },
+    {
+      "id": "4",
+      "title": "CLASSIC 350 RED",
+      "price": 210000,
+      "brand": "Royal Enfield",
+      "category": "Cruiser",
+      "stock": 15,
+      "rating": 4.6,
+      "image": "/classic-red.jpeg"
+    },
+    {
+      "id": "5",
+      "title": "METEOR 350 BLUE",
+      "price": 225000,
+      "brand": "Royal Enfield",
+      "category": "Cruiser",
+      "stock": 10,
+      "rating": 4.5,
+      "image": "/meteor-blue.jpeg"
+    },
+    {
+      "id": "SVoljhjf2pQ",
+      "title": "Access"
+    },
+    {
+      "id": "1aKdm52QWfA",
+      "title": "Access"
+    },
+    {
+      "id": "-sSeDHW1Ols",
+      "title": "Access"
+    },
+    {
+      "id": "8fc-tpT6zn8",
+      "title": "Access"
+    },
+    {
+      "id": "wuq3DInq94Q",
+      "title": "Access"
+    },
+    {
+      "id": "P8wCaeMvkvA",
+      "title": "Access"
+    },
+    {
+      "id": "_xb_qE8vfsM",
+      "title": "Access"
+    },
+    {
+      "id": "EuEVjbatErg",
+      "title": "Access"
+    },
+    {
+      "id": "8j08DXbNXTc",
+      "title": "Access"
+    },
+    {
+      "id": "rQFixSp3uHg",
+      "title": "Access"
+    },
+    {
+      "id": "M5AQpzJpsYg",
+      "title": "Access"
+    },
+    {
+      "id": "p-8mhJ55cFM",
+      "title": "Access"
+    },
+    {
+      "id": "wR9LUjpPAoE",
+      "title": "Access"
+    },
+    {
+      "id": "NCDi0FKugEc",
+      "title": "Access"
+    },
+    {
+      "id": "AeiCNk7Wf0Y",
+      "title": "Access"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
