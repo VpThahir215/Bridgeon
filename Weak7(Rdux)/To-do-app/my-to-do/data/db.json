@@ -1,0 +1,13 @@
+{
+  "notes": [
+    {
+      "text": "messi",
+      "id": 1
+    },
+    {
+      "text": "ney",
+      "id": 2
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
