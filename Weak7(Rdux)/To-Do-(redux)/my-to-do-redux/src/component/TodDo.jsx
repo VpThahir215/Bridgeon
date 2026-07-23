@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import { addNote } from './toDo'
+import { doDelete } from './toDo'
+import { doEdit } from './toDo'
 import { store } from '../cart'
 function TodDo() {
     const useToDo=useSelector((state)=>state.note.note)
     const [note,setNote]=useState("")
     const dispatch=useDispatch()
+    const [editNote,setEditNote]=useState(null)
 
   return (
     <div>
@@ -15,10 +18,14 @@ function TodDo() {
      value={note}  name="" id="" placeholder='Type......'></textarea>
      <button onClick={()=>dispatch(addNote(note),setNote(""))}>Save</button>
        {
-        useToDo.map((val)=>{
+        useToDo.map((val,index)=>{
             return (
                 <div >
 <h1>{val}</h1>
+<button
+onClick={()=>dispatch(doDelete(index))}
+>Delete</button>
+<button onClick={()=>{setEditNote(index),setNote(val)}}>Edit</button>
                 </div>
             )
         })

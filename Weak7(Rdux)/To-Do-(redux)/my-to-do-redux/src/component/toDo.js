@@ -10,8 +10,15 @@ const noteSlice=createSlice({
     reducers:{
         addNote:((state,action)=>{
             state.note.push(action.payload)
-        })
+        }),
+          doDelete:((state,action)=>{
+            state.note=state.note.filter((_,index)=>index !==action.payload)
+          }),
+          doEdit:((state,action)=>{
+            state.note[action.payload.index]=action.payload.text
+          })
+        
     }
 })
-export const {addNote}=noteSlice.actions;
+export const {addNote,doDelete,doEdit}=noteSlice.actions;
 export default noteSlice.reducer
