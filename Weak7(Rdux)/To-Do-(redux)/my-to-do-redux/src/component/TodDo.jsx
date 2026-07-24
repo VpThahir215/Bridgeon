@@ -16,7 +16,17 @@ function TodDo() {
       <textarea
       onChange={((e)=>setNote(e.target.value))}
      value={note}  name="" id="" placeholder='Type......'></textarea>
-     <button onClick={()=>dispatch(addNote(note),setNote(""))}>Save</button>
+     <button onClick={()=>{
+      if(editNote===null){
+        dispatch(addNote(note))
+      }else{
+        dispatch(doEdit({
+          index:editNote,
+          text:note
+        }))
+      }
+      setNote("")
+     }}>Save</button>
        {
         useToDo.map((val,index)=>{
             return (
