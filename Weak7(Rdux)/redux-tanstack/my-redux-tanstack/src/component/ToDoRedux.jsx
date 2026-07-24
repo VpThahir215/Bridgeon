@@ -10,7 +10,7 @@ function ToDoRedux() {
     const [editId,setEditId]=useState(null)
   return (
     <div>
-      <h1>To-Do</h1>
+      <h1>To-Do-Redux</h1>
       <textarea value={inpNote}
       onChange={((e)=>setNote(e.target.value))}
       name="" id="" placeholder='Text.....'></textarea>

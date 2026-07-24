@@ -7,6 +7,7 @@ import Figma from './component/Figma'
 import Login from './component/Login'
 import Counter from './component/Counter'
 import ToDoRedux from './component/ToDoRedux'
+import TodoTanstack from './component/TodoTanstack'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +18,7 @@ function App() {
     <Login/>
     <Counter/>
     <ToDoRedux/>
+    <TodoTanstack/>
     </>
   )
 }
