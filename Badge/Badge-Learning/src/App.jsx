@@ -2,6 +2,9 @@ import { useState } from 'react'
 import{Routes,Route,useNavigate} from 'react-router-dom'
 import { lazy,Suspense } from 'react'
 import './App.css'
+import UseReduce from './UseReduce'
+import UseRef from './UseRef'
+import Pagination from './Pagination'
 const Memo=lazy(()=>import('./Memo'))
 
 function App() {
@@ -10,8 +13,12 @@ function App() {
 
   return (
     <>
+    <UseReduce/>
+    <UseRef/>
+    <Pagination/>
     <h1>Main</h1>
     <button onClick={()=>navigate('/memo')}>Go To Memo</button>
+    
 <Suspense fallback={<h1>Loading....</h1>}>
      <Routes>
          <Route path="/memo" element={ <Memo/>} />
