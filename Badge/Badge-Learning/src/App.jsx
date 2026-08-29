@@ -5,16 +5,24 @@ import './App.css'
 import UseReduce from './UseReduce'
 import UseRef from './UseRef'
 import Pagination from './Pagination'
+import  User  from './Context'
+import Context from './Context'
+import ContextSample from './ContextSample'
 const Memo=lazy(()=>import('./Memo'))
+
 
 function App() {
   const [count, setCount] = useState(0)
   const navigate=useNavigate()
+  const [name,setName]=useState("Thahir")
 
   return (
     <>
+    <User.Provider value={{name,setName}}>
+      <ContextSample/>
     <UseReduce/>
     <UseRef/>
+    </User.Provider>
     <Pagination/>
     <h1>Main</h1>
     <button onClick={()=>navigate('/memo')}>Go To Memo</button>

@@ -2,6 +2,7 @@ import React from 'react'
 import { useReducer } from 'react'
 import reduce from './reduce'
 
+
 const UseReduce = () => {
     const[count,dispatch]=useReducer(reduce,0)
   return (
