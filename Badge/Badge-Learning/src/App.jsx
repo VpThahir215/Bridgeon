@@ -10,6 +10,7 @@ import Context from './Context'
 import ContextSample from './ContextSample'
 import Tanstack from './Tanstack'
 import Counter from './Counter'
+import Review from './Review'
 const Memo=lazy(()=>import('./Memo'))
 
 
@@ -21,6 +22,7 @@ function App() {
   return (
     <>
     <User.Provider value={{name,setName}}>
+      <Review/>
       <Counter/>
       <Tanstack/>
       <ContextSample/>

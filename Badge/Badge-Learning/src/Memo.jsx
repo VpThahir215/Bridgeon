@@ -17,7 +17,7 @@ const Memo = () => {
         <h1>Count : {memo}</h1>
         <h1>Name :{name}</h1>
 
-        <ReactMemo name="Thahir"/>
+        <ReactMemo name={name}/>
       
     </div>
   )

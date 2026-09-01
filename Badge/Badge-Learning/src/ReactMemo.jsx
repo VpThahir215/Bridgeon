@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const ReactMemo =React.memo (({name}) => {
+const ReactMemo =React.memo(({name}) => {
     console.log("React memo updating.....");
     // const [name,setName]=useState()
     

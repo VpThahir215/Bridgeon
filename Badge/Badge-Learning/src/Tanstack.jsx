@@ -43,7 +43,7 @@ console.log(currentPage)
 
             <button
                 onClick={() => setPage(page + 1)}
-                disabled={page===Math.ceil(data.length)/perPage}
+                disabled={page===Math.ceil(data)/perPage}
             >
                 Next
             </button>
