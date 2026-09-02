@@ -15,6 +15,7 @@ import Leetcode_1910 from './Leetcode_1910'
 import BoxColorChange from './BoxColorChange'
 import ToogleBtn from './ToogleBtn'
 import SignUp from './SignUp'
+import CheckBox from './CheckBox'
 const Memo=lazy(()=>import('./Memo'))
 
 
@@ -26,6 +27,7 @@ function App() {
   return (
     <>
     <User.Provider value={{name,setName}}>
+      <CheckBox/>
       <SignUp/>
       <ToogleBtn/>
       <BoxColorChange/>
