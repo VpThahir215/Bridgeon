@@ -13,6 +13,8 @@ import Counter from './Counter'
 import Review from './Review'
 import Leetcode_1910 from './Leetcode_1910'
 import BoxColorChange from './BoxColorChange'
+import ToogleBtn from './ToogleBtn'
+import SignUp from './SignUp'
 const Memo=lazy(()=>import('./Memo'))
 
 
@@ -24,6 +26,8 @@ function App() {
   return (
     <>
     <User.Provider value={{name,setName}}>
+      <SignUp/>
+      <ToogleBtn/>
       <BoxColorChange/>
       <Leetcode_1910/>
       <Review/>
