@@ -8,7 +8,7 @@ const Review = () => {
     let [isDebounce,setIsDebounce]=useState(false)
     let searched=arr.filter((val)=>{
         let searchVal=debounce.toLocaleLowerCase()
-        let match=val.includes(searchVal)
+        let match=val.toLowerCase().includes(searchVal)
         
         return(
             match
@@ -17,6 +17,7 @@ const Review = () => {
       useEffect(()=>{
        setIsDebounce(true)
         const timer=setTimeout(() => {
+          const de=inp
             setDebounce(inp)
             setIsDebounce(false)
         }, 3000);   

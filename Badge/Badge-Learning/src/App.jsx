@@ -11,6 +11,8 @@ import ContextSample from './ContextSample'
 import Tanstack from './Tanstack'
 import Counter from './Counter'
 import Review from './Review'
+import Leetcode_1910 from './Leetcode_1910'
+import BoxColorChange from './BoxColorChange'
 const Memo=lazy(()=>import('./Memo'))
 
 
@@ -22,6 +24,8 @@ function App() {
   return (
     <>
     <User.Provider value={{name,setName}}>
+      <BoxColorChange/>
+      <Leetcode_1910/>
       <Review/>
       <Counter/>
       <Tanstack/>
