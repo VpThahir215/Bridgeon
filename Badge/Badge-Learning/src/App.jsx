@@ -16,6 +16,8 @@ import BoxColorChange from './BoxColorChange'
 import ToogleBtn from './ToogleBtn'
 import SignUp from './SignUp'
 import CheckBox from './CheckBox'
+import StopWatch from './StopWatch'
+import UseReduce2 from './UseReduce2'
 const Memo=lazy(()=>import('./Memo'))
 
 
@@ -27,6 +29,8 @@ function App() {
   return (
     <>
     <User.Provider value={{name,setName}}>
+      <UseReduce2/>
+      <StopWatch/>
       <CheckBox/>
       <SignUp/>
       <ToogleBtn/>
