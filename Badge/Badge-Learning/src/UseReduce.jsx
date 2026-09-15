@@ -8,8 +8,8 @@ const UseReduce = () => {
   return (
     <div>
         <h1>{count}</h1>
-        <button onClick={()=>dispatch({type:"incriment"})}>Incriment</button>
-        <button onClick={()=>dispatch({type:"decriment"})}>Decriment</button>
+        <button onClick={()=>dispatch({type:"incriment"})}>Incrimentt</button>
+        <button onClick={()=>dispatch({type:"decriment"})}>Decrimentt</button>
       
     </div>
   )

@@ -25,6 +25,7 @@ import Pagination2 from './Pagination2'
 import ChatRoom from './ChatRoom'
 import CheckBox2 from './CheckBox2'
 import RevieTask from './RevieTask'
+import Todo from './Todo'
 const Memo = lazy(() => import('./Memo'))
 
 
@@ -37,6 +38,7 @@ function App() {
   return (
     <>
       <User.Provider value={{ name, setName }}>
+        <Todo/>
            <button onClick={() => setShowChat(!showChat)}>
                 Leave Chat
             </button>
