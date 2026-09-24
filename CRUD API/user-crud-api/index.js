@@ -58,8 +58,7 @@ app.post('/user',(req,res)=>{
             age:req.body.age
           }
           user.push(newUser)
-           fs.writeFile('../data/user.json',JSON.stringify(user,null,2),
-(err)=>{
+           fs.writeFile('../data/user.json',JSON.stringify(user,null,2),(err)=>{
     if(err){
         return res.status(500).json({
             success:false,
@@ -185,6 +184,114 @@ app.delete('/user/:id',(req,res)=>{
         
         )
     })
+})
+app.post('/new',(req,res)=>{
+    
+    fs.readFile('../data/new.json','utf8',(err,data)=>{
+       
+        
+        if(err){
+          return  res.status(500).json({
+                success:false,
+                message:'Faild to read user'
+            })
+           
+        }
+        const user=JSON.parse(data)
+        const newUser={
+            id:Date.now(),
+            name:req.body.name,
+            mail:req.body.mail,
+            place:req.body.place
+        }
+        user.push(newUser)
+        fs.writeFile('../data/new.json',JSON.stringify(user,null,2),(err)=>{
+               if(err){
+          return  res.status(500).json({
+                success:false,
+                message:'Faild to read user'
+            })
+           
+        }
+            
+  res.status(200).json({
+            data:user
+        })
+        })
+      
+        
+    })
+})
+app.delete('/new/:id',(req,res)=>{
+    fs.readFile('../data/new.json','utf8',(err,data)=>{
+         if(err){
+          return  res.status(500).json({
+                success:false,
+                message:'Faild to read user'
+            })
+           
+        }
+        const user=JSON.parse(data)
+        const id=Number(req.params.id)
+        const index=user.findIndex(val=>val.id===id)
+            if (index === -1) {
+            return res.status(404).json({
+                success: false,
+                message: 'User not found'
+            })
+        }
+        const userDelete=user.splice(index,1)
+        fs.writeFile('../data/new.json',JSON.stringify(user,null,2),(err)=>{
+            if(err){
+          return  res.status(500).json({
+                success:false,
+                message:'Faild to delete user'
+            })
+           
+        }
+        res.status(200).json({
+            success:true,
+            data:userDelete
+            
+        })
+
+        })
+        
+    })
+
+})
+app.put('/new/:id',(req,res)=>{
+    fs.readFile('../data/new.json','utf8',(err,data)=>{
+         if(err){
+          return  res.status(500).json({
+                success:false,
+                message:'Faild to read user'
+            })
+           
+        }
+        const user=JSON.parse(data)
+        const id=Number(req.params.id)
+        const up=user.find(val=>val.id===id)
+        up.name=req.body.name
+        up.mail=req.body.mail
+        up.place=req.body.place
+        fs.writeFile('../data/new.json',JSON.stringify(up,null,2),(err)=>{
+              if(err){
+          return  res.status(500).json({
+                success:false,
+                message:'Faild to user'
+            })
+           
+        }
+        res.status(200).json({
+            success:true,
+            data:up
+        })
+
+        })
+
+    })
+
 })
    
 app.listen(3000,()=>{
