@@ -15,12 +15,14 @@ app.get('/test',(req,res)=>{
 app.put('/test/:id',(req,res)=>{
     fs.readFile('../data/server.json','utf8',(err,data)=>{
          const user=JSON.parse(data)
-             const id=Number(req.body.id)
+             const id=Number(req.params.id)
              const us=user.find(val=>val.id===id)
              us.name=req.body.name
               us.mail=req.body.mail
                us.place=req.body.place
-         fs.writeFile('../data/serve.json',JSON.stringify,(err)=>{
+               
+               
+         fs.writeFile('../data/server.json',JSON.stringify,(err)=>{
              res.json({
           data:us
        })
