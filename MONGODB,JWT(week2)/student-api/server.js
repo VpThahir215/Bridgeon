@@ -21,9 +21,20 @@ mongoose.connect(process.env.MONGO_URI)
     console.log('MongoDb connections Faild',error);
     
 })
-app.get('/',async(req,res)=>{
-    const data=await students.find({age:19},{projection:{name:1,_id:0}}).toArray()
+app.get('/students',async(req,res)=>{
+   
+    try{
+        const {gender} =req.query
+        //  const data=await students.find({gender:gender}).toArray()
+        const data=await students.find({name:{$regex:"A",$options:"i"}},{projection:{name:1,_id:0}}).toArray()
     res.json(data)
+
+    }catch{
+        res.status(500).json({
+            message:'Failed to fetch students'
+        })
+
+    }
 })
 app.listen(PORT,()=>{
     console.log("Server started on port : 5001")
