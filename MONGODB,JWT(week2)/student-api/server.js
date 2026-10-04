@@ -3,6 +3,7 @@ import "dotenv/config";
 import cors from 'cors'
 import mongoose from 'mongoose';
 import {MongoClient} from 'mongodb'
+import bcrypt from 'bcrypt'
 
 
 const client=new MongoClient(process.env.MONGO_URI)
@@ -11,16 +12,21 @@ const db=client.db('user')
 const students=db.collection('students')
 const app=express()
 const PORT=process.env.PORT || 5001
+const password="VpThahir"
+const hashedPassword=await bcrypt.hash(password,10);
+
 app.use(cors())
 app.use(express.json())
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
     console.log('MongoDb connected...')
+    console.log(hashedPassword)
 
 }).catch((error)=>{
     console.log('MongoDb connections Faild',error);
     
 })
+
 app.get('/students',async(req,res)=>{
    
     try{
