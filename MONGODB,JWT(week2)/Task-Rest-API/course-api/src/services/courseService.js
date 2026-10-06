@@ -1,8 +1,11 @@
 import Course from "../models/Course.js";
 
 
-const getCourses=async ()=>{
-    const courses=await Course.find();
+ export const getCourses=async ()=>{
+    const courses=await Course.find({},{title:1,_id:1});
     return courses
 }
-export default getCourses   
+export const createCourse=async (coursesData)=>{
+    const course=await Course.create(coursesData)
+    return course   
+}

@@ -1,6 +1,6 @@
-import getCourses from "../services/courseService.js";
+import {getCourses,createCourse} from "../services/courseService.js";
 
-const getAllCourses=async (req,res)=>{
+export const getAllCourses=async (req,res)=>{
 
     try{
         const course=await getCourses()
@@ -16,5 +16,21 @@ const getAllCourses=async (req,res)=>{
     }
 
 
+}   
+export const createNewCourse=async(req,res)=>{
+    try{
+        const course=await createCourse(req.body);
+       
+        
+        res.status(201).json({
+            success:true,
+            data:course
+        })
+    }catch(error){
+        res.status(500).json({
+            success:false,
+            message:"Faild to create course",
+            error:error.message
+        })
+    }
 }
-export default getAllCourses
