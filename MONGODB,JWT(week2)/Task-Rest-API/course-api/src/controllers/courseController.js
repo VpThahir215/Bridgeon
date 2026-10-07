@@ -11,7 +11,8 @@ export const getAllCourses=async (req,res)=>{
     }catch(error){
         res.status(500).json({
             success:false,
-            message:'Faild to fetch courses'
+            message:'Faild to fetch courses',
+            err:error.message
         })
     }
 

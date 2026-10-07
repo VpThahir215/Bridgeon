@@ -2,7 +2,37 @@ import Course from "../models/Course.js";
 
 
  export const getCourses=async ()=>{
-    const courses=await Course.find({},{title:1,_id:1});
+    const courses=await Course.aggregate([
+        // {
+        //     $match:{
+        //         price:{
+        //             $lte:5000
+        //         }
+        //     }
+        // },
+        {
+    
+            $sort:{
+                price:-1
+            }
+        },
+        {
+            $project:{
+                title:1,
+                price:1,
+                _id:0
+            }
+        },
+        {
+            $group:{
+                _id:null,
+                totalPrice:{
+                    $sum:"$price"
+                }
+            }
+        }
+        
+    ])
     return courses
 }
 export const createCourse=async (coursesData)=>{
