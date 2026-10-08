@@ -3,14 +3,17 @@ import 'dotenv/config'
 import connectDb from './src/config/db.js'
 import courseRoutes from './src/routs/courseRoutes.js'
 import mongoose from 'mongoose'
+import authRoutes from './src/routs/authRoutes.js'
 
 const app=express()
 const PORT=process.env.PORT
 console.log('hey',PORT);
 
 app.use(express.json())
-
+ 
 app.use("/api/courses",courseRoutes)
+app.use("/api/auth", authRoutes);
+    app.use(express.static("src"))
 app.get("/",async(req,res)=>{
    
     res.json({
