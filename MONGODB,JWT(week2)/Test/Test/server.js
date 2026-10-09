@@ -3,11 +3,13 @@ import 'dotenv/config'
 import connectMongodb from './src/config/db.js'
 import mongoose from 'mongoose'
 import route from './src/routes/userRoute.js'
+import Aroute from './src/routes/authRoutes.js'
 
 const app=express()
 app.use(json())
 app.use(express.static('public'))
 app.use('/api/auth',route)
+app.use('/api/authentication',Aroute)
 const PORT=process.env.PORT
 app.get('/main',(req,res)=>{
     res.status(201).json({
