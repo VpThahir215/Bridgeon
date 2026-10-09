@@ -5,8 +5,9 @@ import mongoose from 'mongoose'
 
 const app=express()
 app.use(json())
+app.use(express.static('public'))
 const PORT=process.env.PORT
-app.get('/',(req,res)=>{
+app.get('/main',(req,res)=>{
     res.status(201).json({
         Massage:"Hi Welcome"
     })
