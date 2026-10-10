@@ -23,7 +23,7 @@ export const loginUser=async ({email,password})=>{
 }
     const token=jwt.sign(
         {
-            name:data.email,
+            userEmail:data.email,
             id:data._id
         },
         
