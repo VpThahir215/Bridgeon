@@ -14,7 +14,7 @@ app.get('/greeting',(req,res)=>{
 
 
 app.listen(3001,()=>{
-    console.log('Running Your Server On Polrt 3001');
+    console.log('Running Server On Port 3001');
     
     
 })
