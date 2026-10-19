@@ -1,7 +1,22 @@
 import User from "../models/userModel.js"
 export const getUser=async ()=>{
   
-        const user=User.find()
+        const user=User.aggregate([
+            {
+                $match:{
+                    age:{
+                        $gte:20
+                    }
+                }
+            },
+            {
+                $project:{
+                    name:1,
+                    _id:0
+                }
+            }
+        
+        ])
    return user
 }
 export const createUser=async (userData)=>{
